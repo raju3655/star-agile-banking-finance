@@ -3,14 +3,14 @@
   hosts : production-server
   become: true
   tasks : 
-  - name: To updating the packages
+  - name: To update the packages
     command : sudo apt-get update
 
-  - name : To  Install Docker
+  - name : To install docker
     command : sudo apt-get install -y docker.io
 
-  - name :  To Start Docker Service
+  - name :  To Start docker Service
     command : sudo systemctl start docker
 
-  - name : To  Deploy our imasge on productionserver
+  - name : To deploy our imasge on productionserver
     command : sudo  docker run -itd -p 8084:8081 --name finance-me zaju123456/finance-me:1.0
