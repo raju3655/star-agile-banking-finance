@@ -13,4 +13,4 @@
     command : sudo systemctl start docker
 
   - name : To deploy our imasge on productionserver
-    command : sudo  docker run -itd -p 8084:8081 --name finance-me zaju123456/finance-me:1.0
+    command : sudo  docker run -itd -p 8082:8081 --name finance-me zaju123456/finance-me:1.0
