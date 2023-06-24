@@ -1,7 +1,7 @@
+---
 - name : This playbook to deploy our image on production-server
   hosts : production-server
   become: true
-  
   tasks : 
   - name: To updating the packages
     command : sudo apt-get update
@@ -12,5 +12,5 @@
   - name :  To Start Docker Service
     command : sudo systemctl start docker
 
-  - name : To  Deploy our imasge on production-server
+  - name : To  Deploy our imasge on productionserver
     command : sudo  docker run -itd -p 8084:8081 --name finance-me zaju123456/finance-me:1.0
